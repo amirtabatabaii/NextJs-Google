@@ -15,15 +15,15 @@ const InfoForm = () => {
 
   async function sendMapData(MapDetails) {
     const req = await fetch(
-      `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${enteredLatitude}%2C${enteredLongitude}&radius=${enteredRadius}&type=&keyword=&key=AIzaSyDtjQncAf_Ihom15Qdh2u482drjKzPsAC4`,
-      //"https://run.mocky.io/v3/86016dda-4ab2-4149-9395-3c29b243ed55",
+      // `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${enteredLatitude}%2C${enteredLongitude}&radius=${enteredRadius}&type=&keyword=&key=AIzaSyDtjQncAf_Ihom15Qdh2u482drjKzPsAC4`,
+      "https://run.mocky.io/v3/86016dda-4ab2-4149-9395-3c29b243ed55",
       {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
         },
-        mode: "no-cors",
+        // mode: "no-cors",
       }
     );
     const newData = await req.json();
